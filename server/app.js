@@ -23,7 +23,8 @@ mongoose.Promise = global.Promise;
 
 var routes     = require('./routes/index');
 var users      = require('./routes/users');
-var profile    = require('./routes/profile')(passport, User, Account, Address);
+var profile    = require('./routes/profile')(passport, User);
+var address    = require('./routes/address')(passport, User, Account, Address);
 var outlets    = require('./routes/outlet')(passport, Outlet, Address);
 var orders     = require('./routes/order')(passport, Order, OrderImage, User, Outlet, Address);
 
@@ -38,6 +39,7 @@ require('./helpers/passport-strategy')(passport, config);
 app.use('/', routes);
 app.use('/user', users);
 app.use('/profile', profile);
+app.use('/profile/address', address);
 app.use('/outlet', outlets);
 app.use('/order', orders);
 

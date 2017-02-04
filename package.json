@@ -1,0 +1,20 @@
+{
+  "name": "fotoshop",
+  "version": "1.0.0",
+  "description": "A software for a photo printing shop.\r Developed solely for learning purpose.",
+  "scripts": {
+    "start": "nodemon ./server/bin/www",
+    "start:server": "nodemon ./server/bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-fuad/Fotoshop.git"
+  },
+  "author": "Fuad Mohammed Firoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dev-fuad/Fotoshop/issues"
+  },
+  "homepage": "https://github.com/dev-fuad/Fotoshop#readme"
+}

@@ -53,7 +53,8 @@ var outletController = function (Outlet, Address) {
                     } else {
                         Outlet.remove({ _id: req.params.id }, function (err) {
                             if (err) {
-                                res.status(500).json({ success: false, error: err });
+                                console.log(err);
+                                res.status(500).json({ success: false, error: 'Unable to delete outlet' });
                             } else {
                                 res.status(200).json({ success: true, message: 'The outlet was deleted.' });
                             }
