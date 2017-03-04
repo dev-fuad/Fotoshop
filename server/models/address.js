@@ -7,6 +7,7 @@ var addressSchema = new mongoose.Schema({
     city: String,
     state: String,
     country: String,
+    zipcode: String,
 	createdAt: { type: Date, default: Date.now }
 });
 

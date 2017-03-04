@@ -3,6 +3,7 @@ var bcrypt = require('bcrypt-nodejs');
 
 var accountSchema = new mongoose.Schema({
     login_type: { type: String, enum: ['Facebook', 'Normal'], default: 'Normal' },
+    roles: { type: String, enum: ['Admin', 'Manager', 'User'], default: 'User' },
     email: { type: String, required: true, unique: true },
     fbId: String,           // Facebook Id for managing FB profiles
     password: String,	    // hash created from password

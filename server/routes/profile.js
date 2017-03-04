@@ -11,7 +11,7 @@ var routes = function (passport, User) {
         User.findOne({
             account: req.user
         }, '-__v -createdAt').populate(
-            'account', 'email'
+            'account', 'email roles'
         ).populate(
             'addresses', '-__v -createdAt'
         ).exec(function (err, user) {
@@ -19,6 +19,9 @@ var routes = function (passport, User) {
                 console.log(err);
                 res.status(500).json({ success: false, message: 'Can\'t find user profile!' });
             } else if (user) {
+                if (user.account.roles == 'User') {
+                    user.account.roles = undefined;
+                }
                 res.status(200).json({ success: true, profile: user });
             } else {
                 console.log(req.user);

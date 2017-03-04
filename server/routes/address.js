@@ -47,6 +47,7 @@ var routes = function (passport, User, Account, Address) {
                     city: req.body.address.city,
                     state: req.body.address.state,
                     country: req.body.address.country,
+                    zipcode: req.body.address.zipcode,
                 });
                 newAddress.save(function (err) {
                     if (err) {
@@ -104,6 +105,8 @@ var routes = function (passport, User, Account, Address) {
                 req.address.state = req.body.state;
             if (req.body.country)
                 req.address.country = req.body.country;
+            if (req.body.zipcode)
+                req.address.zicode = req.body.zipcode;
             req.address.save(function (err) {
                 if (err) {
                     console.log(err);
