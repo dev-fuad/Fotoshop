@@ -1,0 +1,10 @@
+page-register {
+
+    .list-md .item-input:not(:last-child),
+    .list-ios .item-input:not(:last-child) {
+        border-bottom: 1px solid color($colors, background);
+    }
+    .list-md .item-input:last-child {
+        border-bottom: 0;
+    }
+}

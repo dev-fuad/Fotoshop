@@ -5,6 +5,7 @@
   "scripts": {
     "start": "nodemon ./server/bin/www",
     "start:server": "nodemon ./server/bin/www",
+    "start:ionic": "cd  ./ionic-client/ && ionic serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

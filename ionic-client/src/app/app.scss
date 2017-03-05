@@ -1,0 +1,90 @@
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.ion-page {
+    background-color: color($colors, background);
+    
+    ion-navbar.toolbar {
+      min-height: 60px;
+    }
+
+    .toolbar-background, .content {
+        background-color: transparent;
+    }
+    
+    // For iOS
+    .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+        border-color: #44464b;
+    }
+    .list-ios {
+        margin-bottom: 20px;
+    }
+
+    // For Android
+    .header-md::after, 
+    .tabs-md[tabsPlacement="top"] > .tabbar::after, 
+    .footer-md::before, 
+    .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+        background-image: none;
+    }
+
+
+    button.full {
+        width: 90%;
+    }
+    .img-textfield {
+        padding: 0;
+        background-color: #2e3135;
+        height: 70px;
+
+        
+        span {
+            background-color: #393c3f;
+        }
+        
+        img {
+            object-fit: scale-down;
+            margin: 16px;
+            height: 2em; 
+            width: 2em;
+        }
+    }
+// CSS for Seperator `---OR---`
+    .seperator {
+        display: block;
+        overflow: hidden;
+        text-align: center;
+    }
+    .seperator:before,
+    .seperator:after {
+        background-color: #fff;
+        content: "";
+        display: inline-block;
+        height: 1px;
+        position: relative;
+        vertical-align: middle;
+        margin-top: -2px;
+        width: 40px;
+    }
+    .seperator:before {
+        right: 0.5em;
+        margin-left: -50%;
+    }
+    .seperator:after {
+        left: 0.5em;
+        margin-right: -50%;
+    }
+}

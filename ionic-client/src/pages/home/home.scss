@@ -1,0 +1,19 @@
+page-home {
+    
+    .logo {
+        height: 30vh;
+    }
+
+    button.fb {
+        background-color: #3c5ca0;
+    }
+
+    // CSS for Fields
+    .list-md .item-input:not(:last-child),
+    .list-ios .item-input:not(:last-child) {
+        border-bottom: 1px solid color($colors, background);
+    }
+    .list-md .item-input:last-child {
+        border-bottom: 0;
+    }
+}
